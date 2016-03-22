@@ -101,7 +101,14 @@ public class Universe {
         Universe newton = new Universe( args[1] );
         double dt = Double.parseDouble(args[0]);
         while (true) {
-            StdDraw.clear(new Color(0, 0, 100));//changed color of the background
+            int  rando = (int) Math.round(Math.random() * 255);//random color hue generator
+            if( rando>=0) {//keeps if statement repeating
+                int  randos = (int) Math.round(Math.random() * 255);//same as rando, renamed due to java issues, creates infinite random color loop, result flashing black and white background effect, super cool
+            } else {//else statement placeholder, essentially unnecessary but allows for things to work
+                return
+                ;
+            }
+            StdDraw.clear(new Color(rando, rando, rando));//changed color of the background
             newton.increaseTime(dt);
             newton.draw();
             StdDraw.show(10);
