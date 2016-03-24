@@ -108,7 +108,7 @@ public class Universe {
                 return
                 ;
             }
-            StdDraw.clear(new Color(rando, rando, rando));//changed color of the background
+            StdDraw.clear(new Color(rando, 100, 50));//changed color of the background
             newton.increaseTime(dt);
             newton.draw();
             StdDraw.show(10);
